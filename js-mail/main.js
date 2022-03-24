@@ -9,8 +9,26 @@ anna@gmail.com
 */
 
 let email = prompt("Inserisci email");
+let addEmail;
+
+let arrayEmail = ["matteo@gmail.com", "fabio@gmail.com", "pietro@gmail.com", "anna@gmail.com", ]
 
 
 
+for(let i = 0; i<arrayEmail.length; i++){
+    if(arrayEmail[i]==email){
+        i=arrayEmail.length;
+        alert("Puoi accedere al contenuto");
+        
+    }else if(arrayEmail[i]!=email && i==arrayEmail.length){
+         addEmail = prompt("Vuoi aggiungere questa email?");
+    }
+    
+    
+}
 
 
+if(addEmail == "si" ){
+    arrayEmail.push(email)
+}
+console.log(arrayEmail);
